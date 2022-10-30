@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 # set the SQLALCHEMY_DATABASE_URI key
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = 'sqlite:///song_library.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///song_library.db'
 app.config['SECRET_KEY'] = 'you-will-never-guess'
 # create an SQLAlchemy object named `db` and bind it to your app
 db = SQLAlchemy(app)
